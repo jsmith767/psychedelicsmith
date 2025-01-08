@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family:  "Book Antiqua";/*'Poppins',sans-serif;*/
     box-sizing: border-box;
 }
 html{
@@ -13,22 +13,23 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
-    background-image:url(images/headshot.png);
+    height: 75vh;
+    background-image:url(images/backgroundtemplatewebsite.png);
     background-size: cover;
     background-position: center;
 }
 .container{
-    padding: 10px 10%;
+    padding: 40px 7%;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    color: #fff
 }
 .logo{
-    width: 100px;
+    width: 120px;
 }
 nav ul li{
     display: inline-block;
@@ -38,14 +39,14 @@ nav ul li{
 nav ul li a{
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 30px;
     position: relative; 
 }
 nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #BA0018;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -56,8 +57,10 @@ nav ul li a:hover:after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 30px;
+    color: #fff; 
+    font-weight: bold;
 
 }
 .header-text h1{
@@ -65,7 +68,7 @@ nav ul li a:hover:after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #9900ff;
+    color: #640064;
 }
 /* ------------about--------- */
 #about{
@@ -82,10 +85,14 @@ nav ul li a:hover:after{
 }
 .about-col-1 img{
     width: 100%;
+    height: 60vh;/*might be bad for mobile?*/
     border-radius: 15px;
 }
 .about-col-2{
     flex-basis: 60%;
+}
+.about-col-2 h1 span{
+    color: #640064;
 }
 .sub-title{
     font-size: 60px;
@@ -107,14 +114,14 @@ nav ul li a:hover:after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #BA0018;
     position: absolute;
     left: 0;
     bottom: -8px;
     transition: 0.5s;
 }
 .tab-links.active-link::after{
-    width: 50%;
+    width: 100%;
 }
 .tab-contents ul li{
     list-style: none;
@@ -122,11 +129,15 @@ nav ul li a:hover:after{
 
 }
 .tab-contents ul li span{
-    color: #b54769;
+    color: #008080; /*#b54769; */
     font-size: 14px;
 }
 .tab-contents{
     display: none;
+}
+.tab-contents p span{
+    color: #008080; /*#b54769; */
+    font-size: 14px;
 }
 .tab-contents.active-tab{
     display: block;
@@ -142,7 +153,7 @@ nav ul li a:hover:after{
     margin-top: 50px;
 }
 .services-list div{
-    background: #414141;
+    background: #36454F;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -166,7 +177,7 @@ nav ul li a:hover:after{
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #BA0018;
     transform: translateY(-10px);
 }
 /* ---------portfolio------ */
@@ -193,7 +204,7 @@ nav ul li a:hover:after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6),#BA0018);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -214,7 +225,7 @@ nav ul li a:hover:after{
 }
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #BA0018;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -234,7 +245,7 @@ nav ul li a:hover:after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #BA0018;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -242,11 +253,150 @@ nav ul li a:hover:after{
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff004f;
+    background: #BA0018;
+}
+/* ---------facilitators------ */
+#facilitators{
+    padding: 80px 0;
+    color: #ababab;
+    /* height: 140vh; */
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.fac-col-1{
+    flex-basis: 100%;
+    display: flex;    
+    flex-direction: column;    
+    justify-content: space-between;    
+    height: 100%;
+}
+.fac-col-1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.fac-col-1 h1 span{
+    color: #640064;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #BA0018;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents ul li span{
+    color: #008080; /*#b54769; */
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents p span{
+    color: #008080; /*#b54769; */
+    font-size: 14px;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.fac-col-2{
+    flex-basis: 45%;
+    display: flex;    
+    flex-direction: column;    
+    justify-content: space-between;    
+    height: 100%;
+}
+.fac-col-2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+.fac-col-2 h1 span{
+    color: #640064;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 300;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #BA0018;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+.tab-contents ul li span{
+    color: #008080; /*#b54769; */
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents p span{
+    color: #008080; /*#b54769; */
+    font-size: 14px;
+}
+.tab-contents.active-tab{
+    display: block;
 }
 /* -------contact ----------*/
 .contact-left{
-    flex-basis: 35%;
+    flex-basis: 100%;
 }
 .contact-right{
     flex-basis: 60%;
@@ -255,7 +405,7 @@ nav ul li a:hover:after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: #BA0018;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -271,12 +421,12 @@ nav ul li a:hover:after{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: #BA0018;
     transform:translateY(-5px)
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: #BA0018;
 }
 .contact-right form{
     width: 100%;
@@ -285,10 +435,10 @@ form input,form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #414141;
+    background: #36454F;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: #080808;
     font-size: 18px;
     border-radius: 6px;
 }
@@ -302,12 +452,12 @@ form .btn2{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #414141;
+    background: #36454F;
     font-weight: 300;
     margin-top: 20px;
 }
 .copyright i{
-    color: #9900ff;
+    color: #640064;
 }
 /* ---------------css for small screens------- */
 nav .fas{
@@ -315,10 +465,13 @@ nav .fas{
 }
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/headshot.png) ;
+        background-image: url(images/picnic-mobile.jpeg);
+        /* background-size: auto;
+        height: auto; */
     }
     .header-text{
-        margin-top: 100%;
+        /* margin-top: 10%; */
+        /* width: 40%; */
         font-size: 16px;
     }
     .header-text h1{
@@ -329,7 +482,7 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        background: #BA0018;
         position: fixed;
         top: 0;
         right: -200px;
@@ -351,13 +504,13 @@ nav .fas{
     .sub-title{
         font-size: 40px;
     }
-    .about-col-1, .about-col-2{
+    .fac-col-1, .fac-col-2, .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
-    .about-col-1{
+    .fac-col-1, .about-col-1{
         margin-bottom: 30px;
     }
-    .about-col-2{
+    .fac-col-2, .about-col-2{
         font-size: 14px;
     }
     .tab-links{
@@ -370,9 +523,12 @@ nav .fas{
     .copyright{
         font-size: 14px;
     }
+    #facilitators{
+        height: auto;
+    }
 }
 #msg{
-    color: #61b752;
+    color: #008080;
     margin-top: -40px;
     display: block;
 }
